@@ -67,11 +67,12 @@ You have the following process which describes the game.
 
 ```mermaid
 flowchart TD
-    _(start) --> init[attempts = 0] --> init2[my_number = random number from 0 to 99] --> begin_msg[/Output welcome message/] --> input_pre[/Input guess/] --> check{attempts < 5 AND guess != my_number?} -- true --> gt_or_lt{guess > my_number?} -- true --> ogt[/Output "Too high"/] --> add_attempts[attempts += 1] --> input_post[/Input guess/] --> check
-    check -- false --> check2{guess == my_number?} -- true --> oc[/Output "You got it!"/] --> __(end)
-    gt_or_lt -- false --> olt[/Output "Too low"/] --> add_attempts
+_(start) --> init[attempts = 0] --> init2[my_number = random number from 0 to 99] --> begin_msg[/Output welcome message/] --> check{attempts < MAX_GUESSES AND guess != my_number?} -- true --> input_pre[/Input guess/] --> add_attempts[attempts += 1] --> status[/"Output status like (2/5) - (*attempts*/*MAX_GUESSES*)"/]--> gt{guess > my_number?} -- true --> ogt[/Output "Too high"/]  --> check
+check -- false --> check2{guess == my_number?} -- true --> oc[/Output "You got it!"/] --> __(end)
+gt -- false --> lt{guess < my_number} -- true --> olt[/Output "Too low"/] --> check
+lt -- false --> check
+check2 -- false --> X[/Output "Out of tries — the number was *my_number*. /] -->__(end)
 
-    check2 -- false --> X[/Output "Out of tries — the number was "/] --> X[/Output bye message including my_number/] -->__(end)
 ```
 
 <!-- Only this part is different -->
