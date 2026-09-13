@@ -1,13 +1,13 @@
 # Programming concepts test
 
-(20 min)
+(15 min)
 
 You may **not use any help** unless stated in the text.
 
 ## MC
 
 > [!IMPORTANT]
-> Provide your answers by editing `quiz-answers.txt` similar to:
+> Provide your answers by editing [`quiz-answers.txt`](quiz-answers.txt) similar to:
 > ```txt
 > 1,2
 > 4
@@ -15,7 +15,7 @@ You may **not use any help** unless stated in the text.
 > ```
 > Only use `0..9,` symbols.
 
-Which of the **three core programming concepts** are used in the following processes?
+Which of the **three core programming concepts** are used in the following process?
 
 ```mermaid
 flowchart LR
@@ -31,6 +31,8 @@ C-- no -->B[Go home] --> D[Drink energy drink] -->  __
 
 ---
 
+Same question.
+
 ```mermaid
 flowchart LR
 _(start)--> C{altitude > 0}-- yes -->A[/Output "Landing"/]-->D[/Input altitude/]-->C
@@ -45,6 +47,8 @@ C-- no -->B[/Output "Landed"/] -->  __(end)
 
 ---
 
+Same question.
+
 ```mermaid
 flowchart LR
 A(Start) --> B[/Input n/] --> C[i = 0] --> D{i < n ?}-- yes -->F[Do something]-->G[add 1 to i] --> D 
@@ -56,27 +60,24 @@ D-- no -->E(End)
 3. repetition
 4. condition
 5. data
+
+---
+
+Does the text description correspond to the flowchart?
+
+
+> Calculate `n!`. `!` stands for [factorial](https://simple.wikipedia.org/wiki/Factorial).
+
+```mermaid
+flowchart TD
+A(Start) --> B[/Input n/] --> C[fact = 1] --> D{is n = 2?}-- yes --> E(End)
+D-- no -->F[multiply fact with n] --> G[subtract 1 from n] --> C
+```
+
+1. Yes
+2. No
+
    
 ## Open ended
 
 How can the three core programming concepts support you in writing software? Provide your answer in `free-response.txt`. 2-3 sentences are plenty.
-
-## Guess my number
-
-You have the following process which describes the game.
-
-```mermaid
-flowchart TD
-_(start) --> init[attempts = 0] --> init2[my_number = random number from 0 to 99] --> begin_msg[/Output welcome message/] --> check{attempts < MAX_GUESSES AND guess != my_number?} -- true --> input_pre[/Input guess/] --> add_attempts[attempts += 1] --> status[/"Output status like (2/5) - (*attempts*/*MAX_GUESSES*)"/]--> gt{guess > my_number?} -- true --> ogt[/Output "Too high"/]  --> check
-check -- false --> check2{guess == my_number?} -- true --> oc[/Output "You got it!"/] --> __(end)
-gt -- false --> lt{guess < my_number} -- true --> olt[/Output "Too low"/] --> check
-lt -- false --> check
-check2 -- false --> X[/Output "Out of tries — the number was *my_number*. /] -->__(end)
-
-```
-
-<!-- Only this part is different -->
-Implement this process in [guess-my-number.py](guess-my-number.py). 
-<!-- end -->
-
-The file has all the code lines you need. You only have to arrange them. You can use Code Runner and do not forget to save your solution back in the repository here.
