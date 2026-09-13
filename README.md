@@ -72,4 +72,8 @@ flowchart TD
     check2 -- false --> X[/Output "Out of tries — the number was "/] --> X[/Output bye message including my_number/] -->__(end)
 ```
 
-Implement this process in [guess-my-number.py](guess-my-number.py). The file has all the code lines you need. You only have to arrange them. You can use Code Runner and do not forget to save your solution back in the repository here.
+<!-- Only this part is different -->
+Implement this process in [guess-my-number.py](guess-my-number.py). 
+<!-- end -->
+
+The file has all the code lines you need. You only have to arrange them. You can use Code Runner and do not forget to save your solution back in the repository here.
