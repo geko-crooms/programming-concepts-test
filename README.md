@@ -30,7 +30,7 @@ C-- no -->B[Go home] --> D[Drink energy drink] -->  __
 ```mermaid
 flowchart LR
 _(start)--> C{altitude > 0}-- yes -->A[/Output "Landing"/]-->D[/Input altitude/]-->C
-C-- no -->B[/Output "Landed"/] -->  __
+C-- no -->B[/Output "Landed"/] -->  __(end)
 ```
 
 1. sequence
