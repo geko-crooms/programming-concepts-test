@@ -2,6 +2,8 @@
 
 (20 min)
 
+You may **not use any help** unless stated in the text.
+
 ## MC
 
 > [!IMPORTANT]
