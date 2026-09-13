@@ -1,5 +1,7 @@
 # Programming concepts test
 
+(20 min)
+
 ## MC
 
 > [!IMPORTANT]
