@@ -66,12 +66,12 @@ D-- no -->E(End)
 Does the text description correspond to the flowchart?
 
 
-> Calculate `n!`. `!` stands for [factorial](https://simple.wikipedia.org/wiki/Factorial).
+> Calculate `n!`. `!` stands for [factorial](https://simple.wikipedia.org/wiki/Factorial). (0! = 1)
 
 ```mermaid
 flowchart LR
-A(Start) --> B[/Input n/] --> C[fact = 1] --> D{is n = 2?}-- yes --> E(End)
-D-- no -->F[multiply fact with n] --> G[subtract 1 from n] --> C
+A(Start) --> B[/Input n/] --> C[fact = 1] --> D{is n < 2?}-- yes --> o[/Output fact/] --> E(End)
+D-- no -->F[fact = fact * n] --> G[n = n -1] --> C
 ```
 
 1. Yes
@@ -80,4 +80,4 @@ D-- no -->F[multiply fact with n] --> G[subtract 1 from n] --> C
    
 ## Open ended
 
-How can the three core programming concepts support you in writing software? Provide your answer in `free-response.txt`. 2-3 sentences are plenty.
+How can the three core programming concepts support you in writing software? Provide your answer in [`free-response.txt`](free-response.txt). 2-3 sentences are plenty.
