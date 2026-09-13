@@ -69,7 +69,7 @@ Does the text description correspond to the flowchart?
 > Calculate `n!`. `!` stands for [factorial](https://simple.wikipedia.org/wiki/Factorial).
 
 ```mermaid
-flowchart TD
+flowchart LR
 A(Start) --> B[/Input n/] --> C[fact = 1] --> D{is n = 2?}-- yes --> E(End)
 D-- no -->F[multiply fact with n] --> G[subtract 1 from n] --> C
 ```
