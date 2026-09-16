@@ -25,7 +25,7 @@ C-- no -->B[Go home] --> D[Drink energy drink] -->  __
 
 1. sequence
 2. selection
-3. repetition
+3. iteration
 
 ---
 
@@ -39,7 +39,7 @@ C-- no -->B[/Output "Landed"/] -->  __(end)
 
 1. sequence
 2. selection
-3. repetition
+3. iteration
 
 
 ---
@@ -54,7 +54,7 @@ D-- no -->E(End)
 
 1. sequence
 2. selection
-3. repetition
+3. iteration
 
 
 ---
